@@ -29,9 +29,9 @@
         }
         .section {
             margin-bottom: 2rem;
-            animation: fadeIn 2s ease-in-out;
         }
         .section h2 {
+            color: #4CAF50;
             border-bottom: 2px solid #4CAF50;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
@@ -58,7 +58,7 @@
             margin: 0.5rem;
             padding: 0.5rem 1rem;
             border-radius: 5px;
-            animation: bounceIn 2s ease-in-out;
+            animation: bounceIn 2s ease-in;
         }
         @keyframes slideInFromTop {
             from {
@@ -80,17 +80,9 @@
                 opacity: 1;
             }
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 25%;
-            }
-            to {
-                opacity: 1;
-            }
-        }
         @keyframes bounceIn {
             0% {
-                transform: scale(0.1);
+                transform: scale(0.5);
                 opacity: 0;
             }
             60% {
@@ -104,6 +96,7 @@
                 transform: scale(1);
             }
         }
+
     </style>
 </head>
 <body>
@@ -116,8 +109,8 @@
         <div class="section" id="about">
             <h2>About Me</h2>
             <p>
-               	 Hey there! I'm a 2<sup>nd</sup> year student pursuing <b>Bachelor of Computer Applications (BCA)</b> at Amrita University, Mysore, with a solid CGPA of 9.36. I’m passionate about computer science and have a strong grasp of the fundamentals, including Operating Systems, Computer Architecture, C, Java, SQL, DBMS, Computer Networks, and web development (HTML, CSS, and JavaScript – just the basics for now!).<br><br>
-                 Always curious, always learning!
+                Hey there! I'm a 2<sup>nd</sup> year student pursuing <b>Bachelor of Computer Applications (BCA)</b> at Amrita University, Mysore, with a solid CGPA of 9.36. I’m passionate about computer science and have a strong grasp of the fundamentals, including Operating Systems, Computer Architecture, C, Java, SQL, DBMS, Computer Networks, and web development.<br><br>
+                Always curious, always learning!
             </p>
         </div>
 
@@ -130,9 +123,32 @@
                 <div>HTML</div>
                 <div>CSS</div>
                 <div>JS</div>
-  		        <div>Communication</div>
-		        <div>Problem Solving</div>
+
+                <div>Communication</div>
+                <div>Problem Solving</div>
             </div>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>Smart India Hackathon (SIH) 2024</h2>
+            <p><b>Problem Statement:</b> AI-Powered Student Assistance Chatbot for the Department of Technical Education, Government of Rajasthan.</p>
+            <p><b>Key Takeaways:</b> Developed an AI-powered chatbot and mobile app, enhancing problem-solving, teamwork, and software development skills.</p>
+        </div>
+
+        <div class="section" id="workshops">
+            <h2>Workshops</h2>
+            <p><b>Competitive Programming Workshop:</b> Learned algorithm optimization, dynamic programming, and efficient coding techniques for problem-solving.</p>
+            <p><b>Blockchain & Web3 Workshop:</b> Gained insights into decentralized technologies, smart contracts, and their applications in the digital economy.</p>
+        </div>
+
+        <div class="section" id="tech-talks">
+            <h2>Tech Talks</h2>
+            <p><b>Neural Networks:</b> Attended a session on 'Overview of Neural Networks in Learning Paradigms' by Charles Jeyaseelan, learning about AI and deep learning models.</p>
+        </div>
+
+        <div class="section" id="social-volunteering">
+            <h2>Social Volunteering</h2>
+            <p><b>Nele Ashrama Experience:</b> Conducted a session on 'Contentment for Joyful Life' at Nele Ashrama, emphasizing gratitude, well-being, and self-awareness.</p>
         </div>
 
         <div class="section" id="contact">
@@ -142,7 +158,7 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 No Right's Reserved :)</p>
+        <p>&copy; 2025 No Right's Reserved '-'</p>
     </div>
 </body>
 </html>
