@@ -10,11 +10,11 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: white;
             color: #333;
             overflow-x: hidden;
         }
-        .header {
+        header {
             background-color: #4CAF50;
             color: white;
             padding: 1rem 0;
@@ -39,7 +39,7 @@
         .section p {
             line-height: 1.6;
         }
-        .footer {
+        footer {
             display: block;
             background-color: #333;
             color: white;
@@ -59,6 +59,12 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             animation: bounceIn 2s ease-in;
+        }
+        header,.skills div {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+        }
+        .skills div:hover{
+            scale: 1.06;
         }
         @keyframes slideInFromTop {
             from {
@@ -96,14 +102,19 @@
                 transform: scale(1);
             }
         }
+        @media screen and (max-width:400px){
+            .container{
+                align-content:  center;
+            }
+        }
 
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>Virendar</h1>
         <p>BCA Student at Amrita University, Mysore</p>
-    </div>
+    </header>
 
     <div class="container">
         <div class="section" id="about">
@@ -157,8 +168,8 @@
         </div>
     </div>
 
-    <div class="footer">
+    <footer>
         <p>&copy; 2025 No Right's Reserved '-'</p>
-    </div>
+    </footer>
 </body>
 </html>
