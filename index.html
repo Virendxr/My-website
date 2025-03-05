@@ -5,19 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virendar's Webpage</title>
     <link rel="icon" href="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-dpporae2.png";>
+
     <style>
+        :root{
+            --base-colorH: linear-gradient(to right, #4CAF50, #2E7D32);
+            --base-colorF: linear-gradient(to right, #000000, #000000, #000000);
+            --text-color :  #333;
+            --secondary-text:  #4CAF50;
+            --white-bg: white;
+            --link: blue;
+        } 
+        
+        .darkmode{
+            --base-colorH: linear-gradient(to right, #4CAF50, #2E7D32);
+            --base-colorF: linear-gradient(to right, #000000, #000000, #000000);
+            --text-color :  #dedede;
+            --secondary-text:  #4CAF50;
+            --white-bg: rgb(0, 0, 0);
+            --link: greenyellow;
+        }
+        #theme-switch {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: var(--white-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        #theme-switch svg {
+            fill: var(--text-color);
+        }
+
+        #theme-switch #light{
+            display: none;
+        }
+        
+        .darkmode #theme-switch #dark{
+            display: none;
+        }
+
+        .darkmode #theme-switch #light{
+            display: block;
+        }
+        
         body {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: white;
-            color: #333;
+            background-color: var(--white-bg);
+            color: var(--text-color);
             overflow-x: hidden;
             font-weight: bolder;
         }
+    
         header {
-            background-color: #4CAF50;
-            color: white;
+            background: var(--base-colorH);
+            color: var(--white-bg);
             padding: 1rem 0;
             text-align: center;
             animation: slideInFromTop 1s ease-in-out;
@@ -32,18 +80,23 @@
             margin-bottom: 2rem;
         }
         .section h2 {
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
+            color:  var(--secondary-text);
+            border-bottom: 2px solid var(--secondary-text);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
         .section p {
             line-height: 1.6;
         }
+
+        a{
+            color: var(--link);
+        }
+
         footer {
             display: block;
-            background: linear-gradient(to right, #111111, #333333, #000000);
-            color: white;
+            background: var(--base-colorF);
+            color:  #dedede;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
@@ -54,8 +107,8 @@
             flex-wrap: wrap;
         }
         .skills div {
-            background: #4CAF50;
-            color: white;
+            background: var(--secondary-text);
+            color: var(--white-bg);
             margin: 0.5rem;
             padding: 0.5rem 1rem;
             border-radius: 9px;
@@ -63,7 +116,7 @@
             transition: transform 0.25s ease-in-out;
         }
         header,.skills div {
-            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            background: var(--base-colorH);
         }
         .skills div:hover{
             transform: scale(1.1); 
@@ -112,11 +165,17 @@
 
     </style>
 </head>
-<body>
+<body >
+    <button id="theme-switch">
+        <svg id="dark" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+
+        <svg id="light" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button>   
     <header>
         <h1>Virendar</h1>
         <p>BCA Student at Amrita University, Mysore</p>
     </header>
+
 
     <div class="container">
         <div class="section" id="about">
@@ -130,6 +189,7 @@
         <div class="section" id="skills">
             <h2>Skills</h2>
             <div class="skills">
+                <div>Problem Solving</div>
                 <div>C</div>
                 <div>Java</div>
                 <div>SQL</div>
@@ -137,7 +197,6 @@
                 <div>CSS</div>
                 <div>JS</div>
                 <div>Communication</div>
-                <div>Problem Solving</div>
                 <div>Design Thinking</div>
                 <div>Time Management</div>
                 <div>Software Engineering</div>
@@ -173,7 +232,30 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 No Right's Reserved '-'</p>
+        <p>&copy; 2025 No Right's Reserved :)</p>
     </footer>
+
+    <script>
+        let darkmode = localStorage.getItem('darkmode');
+        const themeSwitch = document.getElementById("theme-switch");
+
+        const enableDarkmode = () => {
+            document.body.classList.add('darkmode');
+            localStorage.setItem('darkmode','active');
+        } 
+        const disableDarkmode = () => {
+            document.body.classList.remove('darkmode');
+            localStorage.setItem('darkmode', null);
+        }         
+
+        if(darkmode === "active") enableDarkmode();
+
+
+        themeSwitch.addEventListener("click", () => {
+            darkmode = localStorage.getItem('darkmode');
+            darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+        })
+    </script>
+
 </body>
 </html>
